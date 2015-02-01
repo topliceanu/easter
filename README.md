@@ -12,7 +12,7 @@
 
 | Indicator              |                                                                          |
 |:-----------------------|:-------------------------------------------------------------------------|
-| documentation          | [topliceanu.github.io/easter](http://topliceanu.github.io/easter) |
+| documentation          | [![Docs Coverage](https://img.shields.io/badge/docs-100%25-green.svg)](http://topliceanu.github.io/easter) |
 | continuous integration | [![Build Status](https://travis-ci.org/topliceanu/easter.svg?branch=master)](https://travis-ci.org/topliceanu/easter) |
 | dependency management  | [![Dependency Status](https://david-dm.org/topliceanu/easter.svg?style=flat)](https://david-dm.org/topliceanu/easter) [![devDependency Status](https://david-dm.org/topliceanu/easter/dev-status.svg?style=flat)](https://david-dm.org/topliceanu/easter#info=devDependencies) |
 | code coverage          | [![Coverage Status](https://coveralls.io/repos/topliceanu/easter/badge.svg?branch=master)](https://coveralls.io/r/topliceanu/easter?branch=master) |
@@ -78,7 +78,7 @@ More examples are in the `/examples` directory, they include instructions on __h
 4. Create a new branch and implement your feature.
  - make sure you add tests for your feature. In the end __all tests have to pass__! To run test suite `$ npm run test`.
  - make sure test coverage does not decrease! Run `$ npm run coverage` to open a browser window with the coverage report.
- - make sure you document your code and that the generated code looks ok. Run `$ npm run doc` to re-generate the documentation.
+ - make sure you document the code and coverage is > 90%. Run `$ npm run doc` to generate the docs and check if they look ok.
  - make sure source code and test code are linted. Run `$ npm run lint`
  - submit a pull request with your code.
  - hit me up for a code review!

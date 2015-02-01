@@ -14,7 +14,7 @@ describe 'RabbitHttpClient', ->
 
         before (done) ->
             # Create a new test queue.
-            @httpClient = new RabbitHttpClient port: 15672
+            @httpClient = new RabbitHttpClient
             @client = new RabbitAmqpClient
             (@client.queue TEST_QUEUE).then (-> done()), done
 
@@ -39,7 +39,7 @@ describe 'RabbitHttpClient', ->
 
         before (done) ->
             # Create a new test queue.
-            @httpClient = new RabbitHttpClient port: 15672
+            @httpClient = new RabbitHttpClient
             @client = new RabbitAmqpClient
             (@client.queue TEST_QUEUE).then (-> done()), done
 
@@ -69,7 +69,7 @@ describe 'RabbitHttpClient', ->
 
         before ->
             # Create a new test queue.
-            @httpClient = new RabbitHttpClient port: 15672
+            @httpClient = new RabbitHttpClient
             @client = new RabbitAmqpClient
 
         it 'should continuously poll the queue for messages '+
