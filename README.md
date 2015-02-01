@@ -21,9 +21,10 @@
 
 ## Features
 
-- Simple API, just a `publish()` and a `subscribe()`
-- Support for AMQP and HTTP apis.
+- Simple API, just a `publish()` and a `subscribe()`.
+- Support for AMQP and HTTP, same api which makes them interchangeable.
 - Transparent queue creation and management.
+- Sensible defaults for the large set of available configuration options.
 
 ## Install
 
@@ -34,6 +35,28 @@ npm install easter
 ## Quick Example
 
 ```javascript
+easter = require('easter');
+
+
+// easter provides singleton methods for convenience but you can just as well
+// use the base classes: RabbitAmqpClient and RabbitHttpClient.
+amqpClient = easter.singleton('amqp', {host: 'localhost', port: 5672});
+httpClient = easter.singleton('http', {host: 'localhost', port: 15672});
+
+
+// The queue is created behind the scenes, if it does not exist yet.
+amqpClient.subscribe('my-test-queue', function (error, message, consume) {
+    consume(); // In this case we are consuming the message immediately!
+    if(error) {
+        return console.log('Failed to connect/fetch message from queue', error);
+    }
+    console.log('Consumed message from queue');
+});
+
+console.log('Publishing message on the queue');
+httpClient.publish('my-test-queue', 'hello easter rabbitmq');
+
+// Note that httpClient and amqpClient are interchangeable.
 ```
 
 More examples are in the `/examples` directory, they include instructions on __how to run and test__.
