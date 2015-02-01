@@ -1,0 +1,14 @@
+language: node_js
+node_js:
+    - 0.10
+services:
+    - rabbitmq
+install:
+    - sudo rabbitmq-plugins enable rabbitmq_management
+    - sudo service rabbitmq-server restart
+    - npm install
+after_success:
+    - npm run coveralls
+branches:
+    only:
+        - master
