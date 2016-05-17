@@ -65,7 +65,7 @@ More examples are in the `/examples` directory, they include instructions on __h
 
 1. Contributions to this project are more than welcomed!
     - Anything from improving docs, code cleanup to advanced functionality is greatly appreciated.
-    - Before you start working on an ideea, please open an issue and describe in detail what you want to do and __why it's important__.
+    - Before you start working on an idea, please open an issue and describe in detail what you want to do and __why it's important__.
     - You will get an answer in max 12h depending on your timezone.
 2. Fork the repo!
 3. If you use [vagrant](https://www.vagrantup.com/) then simply clone the repo into a folder then issue `$ vagrant up`
@@ -89,7 +89,7 @@ More examples are in the `/examples` directory, they include instructions on __h
 
 (The MIT License)
 
-Copyright (c) 2012 Alexandru Topliceanu (alexandru.topliceanu@gmail.com)
+Copyright (c) 2016 Alexandru Topliceanu (alexandru.topliceanu@gmail.com)
 
 Permission is hereby granted, free of charge, to any person obtaining
 a copy of this software and associated documentation files (the
