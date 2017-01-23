@@ -1,6 +1,6 @@
 {
   "name": "easter",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Amqp/Http pub/sub client for RabbitMQ",
   "homepage": "http://github.com/topliceanu/easter",
   "license": "MIT",
@@ -31,7 +31,7 @@
     "doc": "./node_modules/.bin/codo src"
   },
   "dependencies": {
-    "amqp": "0.2.0",
+    "amqp": "0.2.6",
     "backoff": "2.4.1",
     "q": "1.1.2",
     "request": "2.51.0",
