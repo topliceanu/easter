@@ -69,12 +69,14 @@ class RabbitAmqpClient extends Client
         connection = amqp.createConnection @options
 
         connection.on 'ready', =>
-            @log 'info', '[AMQP Client] Connection established', @options
+            preferences = _.omit @options, ['login', 'password']
+            @log 'info', '[AMQP Client] Connection established', preferences
             deferred.resolve connection
 
         connection.on 'error', (error) =>
+            preferences = _.omit @options, ['login', 'password']
             @log 'error', '[AMQP Client] Connection failed!',
-                error, @options
+                error, preferences
             deferred.reject error
 
         @connection = deferred.promise
