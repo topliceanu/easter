@@ -1,6 +1,6 @@
 {
   "name": "easter",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Amqp/Http pub/sub client for RabbitMQ",
   "homepage": "http://github.com/topliceanu/easter",
   "license": "MIT",
